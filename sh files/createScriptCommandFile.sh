@@ -4,7 +4,7 @@
 # 
 # author : Grégory C.
 # mail : 
-# version : 1.0 Septembre 2026
+# version : 2.0 2nd October 2026
 # 
 # ----------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ FILE_NAME="script_v$(date +%Y%m%d_%H%M%S)"
 touch "$CURRENT_DIRECTORY/$FILE_NAME.sh"
 
 # Écrire le contenu dans le fichier
-cat > $CURRENT_DIRECTORY/$FILE_NAME.sh << EOF
+cat > "$CURRENT_DIRECTORY/$FILE_NAME.sh" << EOF
 #!/bin/bash
 # Arrêt du script si une commande échoue
 set -euo pipefail
@@ -38,10 +38,10 @@ read -r -p "⚠️  Appuyez sur Entrée pour fermer cette fenêtre..." _
 EOF
 
 # Rendre le fichier exécutable
-chmod +x $CURRENT_DIRECTORY/$FILE_NAME.sh
+chmod +x "$CURRENT_DIRECTORY/$FILE_NAME.sh"
 
 # Renommer le fichier en .command
-mv $CURRENT_DIRECTORY/$FILE_NAME.sh $CURRENT_DIRECTORY/$FILE_NAME.command
+mv "$CURRENT_DIRECTORY/$FILE_NAME.sh" "$CURRENT_DIRECTORY/$FILE_NAME.command"
 
 
 # --- Fin du script ---
